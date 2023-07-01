@@ -1,0 +1,62 @@
+.login_container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.strip {
+  background: #008080;
+  height: 114px;
+}
+
+.login_box {
+  height: 485px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.box {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recover_text {
+  color: red;
+  height: 40px;
+  font-weight: 500;
+}
+
+.info {
+  color: black;
+  font-weight: 500;
+}
+
+.terms {
+  color: #008080;
+}
+
+.btnSend {
+  background-color: #008080;
+  color: white;
+  outline: none;
+  height: 40px;
+  width: 300px;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: none;
+  margin-top: 69px;
+  margin-bottom: 30px;
+  border-radius: 13px;
+  padding: 10px;
+}
+
+.inpNo {
+  background-color: white;
+  color: black;
+  outline: none;
+  height: 35px;
+}
