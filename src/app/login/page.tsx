@@ -2,8 +2,25 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const { push } = useRouter();
+  const [mobileNo, setMobileNo] = useState("");
+  function getMobileNo(e: any) {
+    const mobileNumber = e.target.value;
+    if (mobileNumber.length > 10) {
+      return;
+    }
+    setMobileNo(mobileNumber);
+  }
+  function generateOTP() {
+    if (mobileNo.length === 10) {
+      window["moNo"] = mobileNo;
+      push("/otp-verify");
+    }
+  }
   return (
     <div className={styles.login_container}>
       <div className={styles.strip}></div>
@@ -19,13 +36,20 @@ export default function Login() {
           </div>
           <div className={styles.mobileNo}>
             <input
+              maxLength={10}
+              value={mobileNo}
               className={styles.inpNo}
               type="number"
               placeholder="Mobile number"
+              onChange={getMobileNo}
             ></input>
           </div>
           <div className={styles.btnSendContainer}>
-            <button type="submit" className={styles.btnSend}>
+            <button
+              type="submit"
+              className={styles.btnSend}
+              onClick={generateOTP}
+            >
               Receive SMS code
             </button>
           </div>
