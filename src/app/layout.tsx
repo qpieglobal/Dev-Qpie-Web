@@ -1,3 +1,5 @@
+"use client";
+
 import "../assets/styles/globals.css";
 import { Inter } from "next/font/google";
 

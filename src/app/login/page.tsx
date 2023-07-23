@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { _window } from "@/config/window";
+import { FirebaseAuth } from "@/services/firebase-auth";
 
 export default function Login() {
   const { push } = useRouter();
@@ -17,7 +19,10 @@ export default function Login() {
   }
   function generateOTP() {
     if (mobileNo.length === 10) {
-      window["moNo"] = mobileNo;
+      _window.moNo = mobileNo;
+      FirebaseAuth.sendFirebaseOTP(mobileNo).then((response) => {
+        console.log("firee", response);
+      });
       push("/otp-verify");
     }
   }
