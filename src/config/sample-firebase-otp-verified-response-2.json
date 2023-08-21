@@ -1,0 +1,37 @@
+{
+    "user": {
+        "uid": "VBMpjkB8EbOn4z3WKtAlcVJaZlG3",
+        "emailVerified": false,
+        "isAnonymous": false,
+        "phoneNumber": "+918983696040",
+        "providerData": [
+            {
+                "providerId": "phone",
+                "uid": "+918983696040",
+                "displayName": null,
+                "email": null,
+                "phoneNumber": "+918983696040",
+                "photoURL": null
+            }
+        ],
+        "stsTokenManager": {
+            "refreshToken": "AMf-vBygqW87a_yXH6WApvYtT5MWVVbywMrlRmRODm8dURxieNYZIqYWOisC0NqSbO4hrD6Ojv5YEs02XT_Ytjav7TkhnWBakrgKRZh9k7L74Mg7rqnByeV0ndGzV99HEqHUB4CJLGLEBUt1Odkgu8-Q2_g-BtyZXlWJviUgTcTzcHn922LmyLMICAmI0oFLZhNuRLXF_soN",
+            "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjYzODBlZjEyZjk1ZjkxNmNhZDdhNGNlMzg4ZDJjMmMzYzIzMDJmZGUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcXBpZS1mMzQyZSIsImF1ZCI6InFwaWUtZjM0MmUiLCJhdXRoX3RpbWUiOjE2OTI2MTE2MDgsInVzZXJfaWQiOiJWQk1wamtCOEViT240ejNXS3RBbGNWSmFabEczIiwic3ViIjoiVkJNcGprQjhFYk9uNHozV0t0QWxjVkphWmxHMyIsImlhdCI6MTY5MjYxMTYwOCwiZXhwIjoxNjkyNjE1MjA4LCJwaG9uZV9udW1iZXIiOiIrOTE4OTgzNjk2MDQwIiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE4OTgzNjk2MDQwIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.Vd3FVvQwc2VMpmvttL-O7if96GnLaBO8NENEwSWpQlF66PPCJQ8YRk5HJ7j0X9OCjU9RjfvxPW8NrtPx_cEWqvHX4dXAWKR0qq5cX_u1O0qRviILETwMki21oXsuADBraadMj4Tbw-Z8o6NNzQ9NczUR5s1tJcFn8uV1otSocOe5wNTCIEbpHut_Zk1lvi8Ycl8h0aZiaXAhvYNJPVKBwHGewXUY9LtEQ86SMn4ZPCrL_8M-fI41TAEd8Zrl_PFIKkp1OzImsAlBwx0_o2z0nFK9S_kbGrdG_WbxeQk0JjfNRPwFGYekzrNxVh8IjN23qFIExlIJjxEB4oaNYdNdTQ",
+            "expirationTime": 1692615207494
+        },
+        "createdAt": "1692610739200",
+        "lastLoginAt": "1692611607943",
+        "apiKey": "AIzaSyBm7gFHReIJ29A0mKxjLDX6ArcBgwdsAWo",
+        "appName": "[DEFAULT]"
+    },
+    "providerId": "phone",
+    "_tokenResponse": {
+        "idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjYzODBlZjEyZjk1ZjkxNmNhZDdhNGNlMzg4ZDJjMmMzYzIzMDJmZGUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcXBpZS1mMzQyZSIsImF1ZCI6InFwaWUtZjM0MmUiLCJhdXRoX3RpbWUiOjE2OTI2MTE2MDgsInVzZXJfaWQiOiJWQk1wamtCOEViT240ejNXS3RBbGNWSmFabEczIiwic3ViIjoiVkJNcGprQjhFYk9uNHozV0t0QWxjVkphWmxHMyIsImlhdCI6MTY5MjYxMTYwOCwiZXhwIjoxNjkyNjE1MjA4LCJwaG9uZV9udW1iZXIiOiIrOTE4OTgzNjk2MDQwIiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJwaG9uZSI6WyIrOTE4OTgzNjk2MDQwIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGhvbmUifX0.Vd3FVvQwc2VMpmvttL-O7if96GnLaBO8NENEwSWpQlF66PPCJQ8YRk5HJ7j0X9OCjU9RjfvxPW8NrtPx_cEWqvHX4dXAWKR0qq5cX_u1O0qRviILETwMki21oXsuADBraadMj4Tbw-Z8o6NNzQ9NczUR5s1tJcFn8uV1otSocOe5wNTCIEbpHut_Zk1lvi8Ycl8h0aZiaXAhvYNJPVKBwHGewXUY9LtEQ86SMn4ZPCrL_8M-fI41TAEd8Zrl_PFIKkp1OzImsAlBwx0_o2z0nFK9S_kbGrdG_WbxeQk0JjfNRPwFGYekzrNxVh8IjN23qFIExlIJjxEB4oaNYdNdTQ",
+        "refreshToken": "AMf-vBygqW87a_yXH6WApvYtT5MWVVbywMrlRmRODm8dURxieNYZIqYWOisC0NqSbO4hrD6Ojv5YEs02XT_Ytjav7TkhnWBakrgKRZh9k7L74Mg7rqnByeV0ndGzV99HEqHUB4CJLGLEBUt1Odkgu8-Q2_g-BtyZXlWJviUgTcTzcHn922LmyLMICAmI0oFLZhNuRLXF_soN",
+        "expiresIn": "3600",
+        "localId": "VBMpjkB8EbOn4z3WKtAlcVJaZlG3",
+        "isNewUser": false,
+        "phoneNumber": "+918983696040"
+    },
+    "operationType": "signIn"
+}

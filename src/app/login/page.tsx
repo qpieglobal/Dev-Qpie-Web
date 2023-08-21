@@ -2,12 +2,16 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { _window } from "@/config/window";
 import { FirebaseAuth } from "@/services/firebase-auth";
+import { auth, createRecaptchaVerifier } from "@/config/firebase";
 
 export default function Login() {
+  useEffect(() => {
+    createRecaptchaVerifier(auth);
+  }, []);
   const { push } = useRouter();
   const [mobileNo, setMobileNo] = useState("");
   function getMobileNo(e: any) {
@@ -20,10 +24,15 @@ export default function Login() {
   function generateOTP() {
     if (mobileNo.length === 10) {
       _window.moNo = mobileNo;
-      FirebaseAuth.sendFirebaseOTP(mobileNo).then((response) => {
-        console.log("firee", response);
-      });
-      push("/otp-verify");
+      FirebaseAuth.sendFirebaseOTP(mobileNo)
+        .then((confirmationResult) => {
+          _window.confirmationResult = confirmationResult;
+          console.log("otp-sent", confirmationResult);
+          push("/otp-verify");
+        })
+        .catch((error) => {
+          console.error("error sending otp", error);
+        });
     }
   }
   return (
@@ -74,7 +83,7 @@ export default function Login() {
           </p>
         </div>
       </div>
-      <div className={styles.strip}></div>
+      <div className={styles.strip} id="_recaptcha"></div>
     </div>
   );
 }

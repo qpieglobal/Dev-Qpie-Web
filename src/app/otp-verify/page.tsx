@@ -2,16 +2,45 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import OTPInput from "react-otp-input";
+import { _window } from "@/config/window";
+import { useRouter } from "next/navigation";
+import { FirebaseAuth } from "@/services/firebase-auth";
+import { auth, createRecaptchaVerifier } from "@/config/firebase";
 
 export default function OTPVerify() {
+  useEffect(() => {
+    createRecaptchaVerifier(auth);
+  }, []);
+  const { push } = useRouter();
   const [otp, setOtp] = useState("");
   function resendOTP() {
     // TODO implement resend OTP
+    FirebaseAuth.sendFirebaseOTP(_window.moNo)
+      .then((confirmationResult) => {
+        _window.confirmationResult = confirmationResult;
+        console.log("otp-sent", confirmationResult);
+      })
+      .catch((error) => {
+        console.error("error sending otp", error);
+      });
   }
   function verifyOTP() {
-    // TODO implement verify OTP
+    _window.confirmationResult
+      .confirm(otp)
+      .then((result: any) => {
+        // User signed in successfully.
+        const user = result.user;
+        console.log("otp-verify", result);
+
+        push("/home");
+      })
+      .catch((error: any) => {
+        // User couldn't sign in (bad verification code?)
+
+        console.error("Error in verifying the OTP", error);
+      });
   }
   return (
     <div className={styles.otpVerify}>
@@ -25,7 +54,7 @@ export default function OTPVerify() {
         <div className={styles.otpHeading}>
           <div className={styles.title}>OTP Verification</div>
           <div className={styles.toMobileNo}>
-            sent SMS on +91 {window?.moNo?.slice(0, -4) + "XXXX"}
+            sent SMS on +91 {_window?.moNo?.slice(0, -4) + "XXXX"}
           </div>
         </div>
         <div className={styles.otpInput}>
@@ -53,6 +82,7 @@ export default function OTPVerify() {
           </button>
         </div>
       </div>
+      <div id="_recaptcha"></div>
     </div>
   );
 }
